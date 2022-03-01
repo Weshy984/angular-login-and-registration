@@ -1,0 +1,51 @@
+<h3 mat-dialog-title>Add Inventory Form</h3>
+<div mat-dialog-content>
+
+    <form [formGroup]="inventoryForm">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Enter product name</mat-label>
+        <input formControlName="prodName" matInput placeholder="prodName">
+      </mat-form-field>
+    
+
+      <mat-form-field appearance="outline">
+        <mat-label>Choose category</mat-label>
+        <mat-select formControlName="prodcategory">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let option of category" [value]="option" >{{ option }}</mat-option>
+          </mat-select>        
+      </mat-form-field>
+   
+
+      <mat-form-field appearance="outline">
+        <mat-label>Choose date Received</mat-label>
+        <input formControlName="date" matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      
+      <label for="">State of product</label><br/>
+      <mat-radio-group formControlName="prodstate" aria-label="Select an option" class="example-radio-group">
+        <mat-radio-button class="example-radio-button" *ngFor="let state of states" [value]="state">{{state}}</mat-radio-button>
+      </mat-radio-group> 
+    
+    
+      <mat-form-field appearance="outline">
+        <mat-label>Enter product price</mat-label>
+        <input class="price" formControlName="price" matInput placeholder="price" >
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea formControlName="description" matInput placeholder="Brief description of your product"></textarea>
+      </mat-form-field>  
+    </form>
+        
+</div>
+
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="primary" (click)="addInventory()">{{actionBtn}}</button>
+  <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close >Cancel</button>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="ui card">
+    <div class="dets">
+        <h1>Login</h1>
+        <h5>Enter your credentials to login</h5>
+     </div>
+     
+     <form [formGroup]="logForm" (ngSubmit)="login()">
+        <div class="capture-details">
+          <input 
+          formControlName="email"
+          class="inp" type="email" placeholder="email"/>
+          <br/>
+          <span class="error-msg" *ngIf="logForm.controls['email'].dirty && logForm.hasError('required','email')">***Email is required***</span>
+        </div>
+        
+        <div class="capture-details">
+          <input formControlName="password"
+          class="inp" type="password" placeholder="password"/>
+          <span class="error-msg" *ngIf="logForm.controls['password'].dirty && logForm.hasError('required','password')">***Password required***</span>
+          <br/>
+        </div> 
+        
+        <button [disabled]="!logForm.valid" class="btn">Login</button>
+      
+    </form>
+    <p>Are you new? <a routerLink="/registration">Sign up here</a></p>
+</div>
+</div>

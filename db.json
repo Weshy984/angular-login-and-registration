@@ -1,0 +1,125 @@
+{
+  "posts": [],
+  "registerusers": [
+    {
+      "Fname": "Wesh wesh",
+      "Contact": null,
+      "email": "wrghv@gmail.com",
+      "password": "12356",
+      "id": 1
+    },
+    {
+      "Fname": "Geff wesh",
+      "Contact": null,
+      "email": "wdewnsd",
+      "password": "12354",
+      "id": 2
+    },
+    {
+      "Fname": "Wesh waweru",
+      "Contact": null,
+      "email": "wesh@gmail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "Fname": "wesh",
+      "Contact": 2334242,
+      "email": "wesh@xyz.com",
+      "password": "123456",
+      "id": 4
+    }
+  ],
+  "inventory": [
+    {
+      "prodName": "Nokia global",
+      "prodcategory": "Electronics",
+      "date": "2022-02-10T05:00:00.000Z",
+      "prodstate": "refubrished",
+      "price": "5000",
+      "description": "nice smartphone",
+      "id": 1
+    },
+    {
+      "prodName": "sofa",
+      "prodcategory": "Furniture",
+      "date": "2022-02-10T05:00:00.000Z",
+      "prodstate": "new",
+      "price": "500",
+      "description": "very comfy seat",
+      "id": 2
+    },
+    {
+      "prodName": "Tomato",
+      "prodcategory": "Fruits",
+      "date": "2022-02-26T05:00:00.000Z",
+      "prodstate": "fresh",
+      "price": "500",
+      "description": "Fresh from the garden",
+      "id": 4
+    },
+    {
+      "prodName": "tv",
+      "prodcategory": "Electronics",
+      "date": "2022-02-09T05:00:00.000Z",
+      "prodstate": "refubrished",
+      "price": "300",
+      "description": null,
+      "id": 5
+    },
+    {
+      "prodName": "mango",
+      "prodcategory": "Fruits",
+      "date": "2022-01-11T05:00:00.000Z",
+      "prodstate": "spoilt",
+      "price": "40",
+      "description": "the mangoes went bad",
+      "id": 7
+    },
+    {
+      "prodName": "bed",
+      "prodcategory": "Furniture",
+      "date": "2022-03-02T05:00:00.000Z",
+      "prodstate": "new",
+      "price": "10",
+      "description": "",
+      "id": 8
+    },
+    {
+      "prodName": "chair",
+      "prodcategory": "Electronics",
+      "date": "2021-12-01T05:00:00.000Z",
+      "prodstate": "refubrished",
+      "price": "50",
+      "description": "",
+      "id": 9
+    },
+    {
+      "prodName": "cabbage",
+      "prodcategory": "Vegetables",
+      "date": "2022-03-25T04:00:00.000Z",
+      "prodstate": "fresh",
+      "price": "5",
+      "description": "",
+      "id": 10
+    }
+  ],
+  "employees": [
+    {
+      "empName": "Kimani lin",
+      "contact": "1234567",
+      "email": "kim@kim.com",
+      "address": "10 south st",
+      "pay": "500",
+      "id": 1
+    },
+    {
+      "empName": "Wesh wesh",
+      "contact": "4353432",
+      "email": "we@we.com",
+      "address": "00 town street",
+      "pay": "300",
+      "id": 2
+    }
+  ]
+}

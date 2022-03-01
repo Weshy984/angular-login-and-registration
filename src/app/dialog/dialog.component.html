@@ -1,0 +1,39 @@
+<h3 mat-dialog-title>Add Employee Form</h3>
+<div mat-dialog-content>
+    <form [formGroup]="employeeForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Enter employee's name</mat-label>
+        <input formControlName="empName" matInput placeholder="Name">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Enter employee's MobileNo</mat-label>
+        <input formControlName="contact" type="tel" matInput placeholder="PhoneNo">
+        <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Employee email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email">
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Employee Address</mat-label>
+        <textarea formControlName="address" matInput placeholder="Ex. 100 Main St"></textarea>
+        <mat-icon matSuffix>location_city</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Enter empoyee pay</mat-label>
+        <input formControlName="pay" class="price"  matInput placeholder="price"  >
+        <mat-icon matSuffix>mood</mat-icon>
+      </mat-form-field>
+    </form>
+</div>
+
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="primary" (click)="addEmployee()">{{actionBtn}}</button>
+  <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close >Cancel</button>
+</div>

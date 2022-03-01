@@ -1,0 +1,22 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+.mat-form-field{
+  width: 100%;
+}
+button.example-custom-date-class {
+  background: orange;
+  border-radius: 100%;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}

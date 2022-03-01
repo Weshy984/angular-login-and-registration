@@ -1,0 +1,38 @@
+<div class="container">
+<div class="ui card">
+    <h1>REGISTRATION</h1>
+      <form [formGroup]="registration" (ngSubmit)="registerUser()">
+        <div class="capture-details">
+            <input 
+            formControlName="Fname" 
+            class="inp" type="text" placeholder="Fname"/>
+            <br/>
+            <div class="error-msg" *ngIf="registration.controls['Fname'].dirty && registration.hasError('required','Fname')">***Name is required***</div>
+        </div>
+        <div class="capture-details">
+            <input 
+            formControlName="Contact"
+            class="inp" type="number" placeholder="phoneNumber"/>
+            <br/>
+        </div>
+        <div class="capture-details">
+            <input 
+            formControlName="email"
+            class="inp" type="email" placeholder="email"/>
+            <br/>
+            <div class="error-msg" *ngIf="registration.controls['email'].dirty && registration.hasError('required','email')">***Email is required***</div>
+        </div>
+        <div class="capture-details">
+            <input 
+            formControlName="password"
+            class="inp" type="password" placeholder="password"/>
+            <br/>
+            <div class="error-msg" *ngIf="registration.controls['password'].dirty && registration.hasError('required','email')">***Password is required***</div>
+        </div>
+        <button 
+        [disabled]="!registration"
+        class="btn">Register</button>
+    </form>
+    <p>Are you already registered? <a routerLink="/login">Log in</a></p>
+  </div>
+</div>
