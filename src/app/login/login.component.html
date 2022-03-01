@@ -1,27 +1,31 @@
 <div class="container">
   <div class="ui card">
-    <div class="dets">
-        <h1>Login</h1>
-        <h5>Enter your credentials to login</h5>
+    <div class="dets">       
+         <span class="log"><h2>Login</h2></span>          
+         <span class="example-spacer">Please Input your credentials </span>    
      </div>
      
      <form [formGroup]="logForm" (ngSubmit)="login()">
         <div class="capture-details">
-          <input 
-          formControlName="email"
-          class="inp" type="email" placeholder="email"/>
-          <br/>
-          <span class="error-msg" *ngIf="logForm.controls['email'].dirty && logForm.hasError('required','email')">***Email is required***</span>
+          <mat-form-field appearance="outline">
+            <mat-label>Employee email</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="email">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
         </div>
         
         <div class="capture-details">
-          <input formControlName="password"
-          class="inp" type="password" placeholder="password"/>
-          <span class="error-msg" *ngIf="logForm.controls['password'].dirty && logForm.hasError('required','password')">***Password required***</span>
-          <br/>
+          <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input  type="password" matInput  placeholder="Password" name="password" formControlName="password">
+         </mat-form-field>
         </div> 
         
-        <button [disabled]="!logForm.valid" class="btn">Login</button>
+        <button 
+        mat-flat-button
+        color="accent"
+        [disabled]="!login"
+        class="btn">Login</button>
       
     </form>
     <p>Are you new? <a routerLink="/registration">Sign up here</a></p>

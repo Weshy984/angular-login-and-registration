@@ -1,38 +1,44 @@
 <div class="container">
 <div class="ui card">
+    <div class="dets">
     <h1>REGISTRATION</h1>
+    </div>
       <form [formGroup]="registration" (ngSubmit)="registerUser()">
         <div class="capture-details">
-            <input 
-            formControlName="Fname" 
-            class="inp" type="text" placeholder="Fname"/>
-            <br/>
-            <div class="error-msg" *ngIf="registration.controls['Fname'].dirty && registration.hasError('required','Fname')">***Name is required***</div>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter names</mat-label>
+                <input formControlName="Fname" matInput placeholder="Name">
+              </mat-form-field>
         </div>
         <div class="capture-details">
-            <input 
-            formControlName="Contact"
-            class="inp" type="number" placeholder="phoneNumber"/>
-            <br/>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter phoneNumber</mat-label>
+                <input 
+                    matInput
+                    formControlName="Contact"
+                    class="inp" type="number" placeholder="phoneNumber"/>
+            </mat-form-field>
         </div>
         <div class="capture-details">
-            <input 
-            formControlName="email"
-            class="inp" type="email" placeholder="email"/>
-            <br/>
-            <div class="error-msg" *ngIf="registration.controls['email'].dirty && registration.hasError('required','email')">***Email is required***</div>
+            <mat-form-field appearance="outline">
+                <mat-label>Employee email</mat-label>
+                <input matInput placeholder="pat@example.com" formControlName="email">
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
         </div>
         <div class="capture-details">
-            <input 
-            formControlName="password"
-            class="inp" type="password" placeholder="password"/>
-            <br/>
-            <div class="error-msg" *ngIf="registration.controls['password'].dirty && registration.hasError('required','email')">***Password is required***</div>
+            <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input  type="password" matInput  placeholder="Password" name="password" formControlName="password">
+             </mat-form-field>
         </div>
         <button 
+        mat-flat-button
+        color="accent"
         [disabled]="!registration"
         class="btn">Register</button>
     </form>
+
     <p>Are you already registered? <a routerLink="/login">Log in</a></p>
   </div>
 </div>

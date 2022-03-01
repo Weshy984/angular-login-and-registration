@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,8 +10,17 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
   
+  email = new FormControl('', [Validators.required, Validators.email]);
   public registration !: FormGroup;
   constructor(private formBuilder : FormBuilder, private http : HttpClient, private router:Router) { }
+
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a value';
+    }
+    return this.email.hasError('email') ? 'Not a valid email' : '';
+
+  }
 
   ngOnInit(): void {
     this.registration = this.formBuilder.group({

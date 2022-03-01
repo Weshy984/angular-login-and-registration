@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -9,8 +9,16 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   
+  email = new FormControl('', [Validators.required, Validators.email]);
   public logForm !: FormGroup;
   
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a value';
+    }
+    return this.email.hasError('email') ? 'Not a valid email' : '';
+
+  }
   constructor(private formBuilder : FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {

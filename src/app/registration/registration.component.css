@@ -1,15 +1,18 @@
+  
 .container {
   padding: 4rem;
   width: 40rem;
   margin: 0 auto;
     
 }
-h1 {
-    font-size: 3rem;
-    text-align: center;
-    color: #FFF89A;
-    margin-top: 0.5rem;
-    margin-bottom: 5rem;
+
+  h1{
+    margin-right: 50%;    
+    color: orange;
+  }
+
+  .dets{
+    margin-bottom: 3rem;
   }
   
   .capture_details {
@@ -24,12 +27,9 @@ h1 {
       width: 100%;
       margin-bottom: 1rem;
   }
-  .inp::placeholder{
-    color: black;
-  }
+  
   .btn {
     width: 100%;
-    color: black;
     font-weight: 400;
     cursor: pointer;
     margin-top: 0.5rem;
@@ -39,20 +39,21 @@ h1 {
     background-color: #FFB2A6;
     transition: 0.7sn;
   }
-  
-  p {
-    padding: 2rem;
-    width: 100%;
-    text-align: center;
+
+  p{
+    margin-block-start: 1rem;
   }
 
   .card {
     padding: 2rem;
     width: 100%;
-    background: #9ADCFF;
-    background: linear-gradient(90deg, #9ADCFF(205, 46%, 30%, 1)0%, #9ADCFF(260, 29%, 36%, 1) 100%);
+    background:rgb(240, 240, 240);
   }
   
-  .error-msg {
-    color: red;
+  .example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
   }
+
+.mat-form-field{
+  width: 100%;
+}
