@@ -6,5 +6,4 @@ To launch this app run; on your terminal navigate to the directory of the dash f
 cd dash
 npm run start
 ```
-# angular-login-and-registration
-# angular-login-and-registration
+
