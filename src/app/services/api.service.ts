@@ -8,9 +8,9 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  //postUser(data:any){
-    //this.http.post<any>("http://localhost:3000/registerusers",data);
-  //}
+  postUser(data:any){
+    this.http.post<any>("http://localhost:3000/registerusers",data);
+  }
   //getUser(data:any){
     //this.http.get<any>("http://localhost:3000/registerusers",data);
     

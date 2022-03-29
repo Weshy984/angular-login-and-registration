@@ -21,9 +21,9 @@
         </div>
         <div class="capture-details">
             <mat-form-field appearance="outline">
-                <mat-label>Employee email</mat-label>
+                <mat-label>Enter email</mat-label>
                 <input matInput placeholder="pat@example.com" formControlName="email">
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                <mat-error *ngIf="email.invalid && email.value.empty">{{getErrorMessage()}}</mat-error>
               </mat-form-field>
         </div>
         <div class="capture-details">
