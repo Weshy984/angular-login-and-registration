@@ -8,7 +8,7 @@
      <form [formGroup]="logForm" (ngSubmit)="login()">
         <div class="capture-details">
           <mat-form-field appearance="outline">
-            <mat-label>Employee email</mat-label>
+            <mat-label>email</mat-label>
             <input matInput placeholder="pat@example.com" formControlName="email">
             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
           </mat-form-field>

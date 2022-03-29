@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,OnDestroy,ChangeDetectorRef } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { ApiService } from '../services/api.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-employee-dash',
@@ -19,10 +20,23 @@ export class EmployeeDashComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private dialog : MatDialog, private api:ApiService, ) { }
+  mobileQuery: MediaQueryList;
+
+  
+  private _mobileQueryListener: () => void;  
+
+  constructor(private dialog : MatDialog, private api:ApiService,changeDetectorRef: ChangeDetectorRef, media: MediaMatcher ) { 
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
+  }
 
   ngOnInit(): void {
     this.viewEmployees();
+  }
+  
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   openDialog() {

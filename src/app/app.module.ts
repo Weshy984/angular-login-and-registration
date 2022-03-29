@@ -23,7 +23,9 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSortModule} from '@angular/material/sort'; 
+import {MatSortModule} from '@angular/material/sort';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {MatDividerModule} from '@angular/material/divider'
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +56,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatSidenavModule,
+    MatDividerModule
        
   ],
   providers: [

@@ -42,6 +42,20 @@
       "email": "lin@co",
       "password": "123456",
       "id": 6
+    },
+    {
+      "Fname": "admin",
+      "Contact": 1223,
+      "email": "admin",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "Fname": "",
+      "Contact": "",
+      "email": "",
+      "password": "",
+      "id": 8
     }
   ],
   "inventory": [
@@ -82,22 +96,13 @@
       "id": 7
     },
     {
-      "prodName": "chair",
-      "prodcategory": "Electronics",
-      "date": "2021-12-01T05:00:00.000Z",
-      "prodstate": "refubrished",
-      "price": "50",
-      "description": "",
-      "id": 9
-    },
-    {
-      "prodName": "cabbage",
+      "prodName": "Kales",
       "prodcategory": "Vegetables",
-      "date": "2022-03-25T04:00:00.000Z",
+      "date": "2022-03-02T05:00:00.000Z",
       "prodstate": "fresh",
-      "price": "5",
-      "description": "",
-      "id": 10
+      "price": "5000",
+      "description": "Fresh produce for wolesal",
+      "id": 8
     }
   ],
   "employees": [

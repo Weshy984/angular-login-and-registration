@@ -15,3 +15,46 @@ table {
   margin: 0 auto;
 
 }
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background:#0F5298;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 98px);
+  width: 100%;
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  display: flex;
+  font-size: 3rem;
+  color: lightgray;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+}
+mat-icon {
+  margin-right: 8px;
+}
+.avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}

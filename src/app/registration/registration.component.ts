@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { empty } from 'rxjs';
 
 @Component({
   selector: 'app-registration',
@@ -32,6 +33,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   registerUser() {
+    if (this.registration.value!=null)
     this.http.post<any>("http://localhost:3000/registerusers",this.registration.value)
     .subscribe(res=>{
       alert("User added succesfully");
