@@ -33,7 +33,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   registerUser() {
-    if (this.registration.value!=null)
+    if (this.registration.value!=null){
     this.http.post<any>("http://localhost:3000/registerusers",this.registration.value)
     .subscribe(res=>{
       alert("User added succesfully");
@@ -42,6 +42,7 @@ export class RegistrationComponent implements OnInit {
     },err=>{
       alert("Registration failed");
     })
+  }
   }
 
 }
