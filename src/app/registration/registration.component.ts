@@ -37,7 +37,8 @@ export class RegistrationComponent implements OnInit {
     this.http.post<any>("http://localhost:3000/registerusers",this.registration.value)
     .subscribe({
       next:(res)=>{
-       alert("User added succesfully");
+      alert("User added succesfully");
+      console.log(this.registration);
       this.registration.reset();
       this.router.navigate(['login']); 
       },

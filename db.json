@@ -49,20 +49,6 @@
       "email": "admin",
       "password": "123456",
       "id": 7
-    },
-    {
-      "Fname": "",
-      "Contact": "",
-      "email": "",
-      "password": "",
-      "id": 8
-    },
-    {
-      "Fname": "",
-      "Contact": "",
-      "email": "",
-      "password": "",
-      "id": 9
     }
   ],
   "inventory": [
