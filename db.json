@@ -108,12 +108,20 @@
       "id": 1
     },
     {
-      "empName": "Kareem Abdul",
-      "contact": "23713784",
-      "email": "kar@em",
-      "address": "12 st",
-      "pay": "300",
-      "id": 2
+      "empName": "Kennedy Njoro",
+      "contact": "0232132332",
+      "email": "ken@ken.com",
+      "address": "10 Main strt\n",
+      "pay": "700",
+      "id": 3
+    },
+    {
+      "empName": "Fisher kimeyu",
+      "contact": "873023223",
+      "email": "fish@kim.com",
+      "address": "14 central strt",
+      "pay": "200",
+      "id": 4
     }
   ]
 }

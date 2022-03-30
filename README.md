@@ -4,5 +4,6 @@ To launch this app run; on your terminal navigate to the directory of the dash f
 
 ```
 npm run start
+npm run sever
 ```
 
