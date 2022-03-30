@@ -16,7 +16,7 @@ export class RegistrationComponent implements OnInit {
   constructor(private formBuilder : FormBuilder, private http : HttpClient, private router:Router) { }
 
   getErrorMessage() {
-    if (this.email.hasError('required') && this.email.value.empty) {
+    if (this.email.hasError('required')) {
       return 'You must enter a value';
     }
     return this.email.hasError('email') ? 'Not a valid email' : '';
