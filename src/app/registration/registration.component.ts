@@ -35,14 +35,17 @@ export class RegistrationComponent implements OnInit {
   registerUser() {
     if (this.registration.value!=null){
     this.http.post<any>("http://localhost:3000/registerusers",this.registration.value)
-    .subscribe(res=>{
-      alert("User added succesfully");
+    .subscribe({
+      next:(res)=>{
+       alert("User added succesfully");
       this.registration.reset();
-      this.router.navigate(['login']);
-    },err=>{
-      alert("Registration failed");
+      this.router.navigate(['login']); 
+      },
+      error:()=>{
+        alert("Registration failed");
+      }
     })
-  }
+    }
   }
 
 }

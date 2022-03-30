@@ -31,25 +31,28 @@ export class LoginComponent implements OnInit {
   login(){
 
     this.http.get<any>("http://localhost:3000/registerusers")
-    .subscribe(res=>{
-      const user = res.find((a:any)=>{
-        return a.email == this.logForm.value.email && a.password === this.logForm.value.password
-        
-      });
-      if(user){
-        alert("Login successful");
-        this.logForm.reset();
-        this.router.navigate(['employeeDash'])
-        
-      }else{
-        alert("User not found");
-        console.log('user not there');
-        this.router.navigate(['registration']);
+    .subscribe({
+      next:(res)=>{
+        const user = res.find((a:any)=>{
+          return a.email == this.logForm.value.email && a.password === this.logForm.value.password
+          
+        });
+        if(user){
+          alert("Login successful");
+          this.logForm.reset();
+          this.router.navigate(['employeeDash'])
+          
+        }else{
+          alert("User not found");
+          console.log('user not there');
+          this.router.navigate(['registration']);
+        }
+      },
+      error:()=>{
+        alert("Error logging in");
       }
-    },err=>{
-      alert("Error logging in");
     })
-
+      
   }
 
 }
