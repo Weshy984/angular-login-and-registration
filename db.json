@@ -42,13 +42,6 @@
       "email": "lin@co",
       "password": "123456",
       "id": 6
-    },
-    {
-      "Fname": "admin",
-      "Contact": 1223,
-      "email": "admin",
-      "password": "123456",
-      "id": 7
     }
   ],
   "inventory": [
@@ -122,6 +115,14 @@
       "address": "14 central strt",
       "pay": "200",
       "id": 4
+    },
+    {
+      "empName": "Dan damean",
+      "contact": "0349382343",
+      "email": "dan@dam.com",
+      "address": "23 strt",
+      "pay": "200",
+      "id": 5
     }
   ]
 }
