@@ -25,7 +25,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
-import {MatDividerModule} from '@angular/material/divider'
+import {MatDividerModule} from '@angular/material/divider';
+import { CurrencyPipe } from '@angular/common';
+import { DEFAULT_CURRENCY_CODE } from '@angular/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,10 +61,11 @@ import {MatDividerModule} from '@angular/material/divider'
     MatSortModule,
     MatSidenavModule,
     MatDividerModule
-       
   ],
   providers: [
-    {provide: MAT_DIALOG_DATA, useValue:{}}
+    {provide: MAT_DIALOG_DATA, useValue:{}},
+    {provide: DEFAULT_CURRENCY_CODE, useValue: 'kshs'}
+
   ],
   bootstrap: [AppComponent]
 })

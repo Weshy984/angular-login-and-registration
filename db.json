@@ -93,36 +93,44 @@
   ],
   "employees": [
     {
-      "empName": "Kimani lin",
-      "contact": "1234567",
-      "email": "kim@kim.com",
-      "address": "10 south st",
-      "pay": "500",
+      "empName": "Ali Chivatsi Dennis",
+      "contact": "0715415865",
+      "email": "chivatsi@sisitech.com",
+      "address": "Nairobi",
+      "pay": "",
       "id": 1
     },
     {
-      "empName": "Kennedy Njoro",
-      "contact": "0232132332",
+      "empName": "Kelvin Mwangi Micha",
+      "contact": "0727290364",
       "email": "ken@ken.com",
-      "address": "10 Main strt\n",
-      "pay": "700",
+      "address": "micha@sisitech.com\n",
+      "pay": "",
       "id": 3
     },
     {
-      "empName": "Fisher kimeyu",
-      "contact": "873023223",
-      "email": "fish@kim.com",
-      "address": "14 central strt",
-      "pay": "200",
+      "empName": "Melanie Fayne Obora",
+      "contact": "0712697518",
+      "email": "melaniefayne@gmail.com",
+      "address": " Nairobi",
+      "pay": "",
       "id": 4
     },
     {
-      "empName": "Dan damean",
-      "contact": "0349382343",
-      "email": "dan@dam.com",
-      "address": "23 strt",
-      "pay": "200",
+      "empName": "Benson Kariuki",
+      "contact": "0701638974",
+      "email": "ben@gmail.com",
+      "address": "Nairobi",
+      "pay": "",
       "id": 5
+    },
+    {
+      "empName": "Geoffrey Waweru",
+      "contact": "0796672119",
+      "email": "gwaweru@sisitech.com",
+      "address": "Nairobi",
+      "pay": "",
+      "id": 6
     }
   ]
 }

@@ -1,7 +1,7 @@
 <p>
     <mat-toolbar color="primary">
         <button mat-icon-button class="example-icon" (click)="snav.toggle()">
-          <mat-icon>menu</mat-icon>
+          <img src="../../assets/images/sisitech-logo (1).png" alt="" class="logo">
         </button>
         <span>Inventory</span>
         <span class="example-spacer"></span>
@@ -10,8 +10,8 @@
 <mat-sidenav-container>
   <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-  <img class="avatar mat-elevation-z8" src="https://logodix.com/logo/2111808.jpg" />
-  <h4 class="name">Company Tracker</h4>
+  <img class="avatar mat-elevation-z8" src="../../assets/images/sisitech-logo.png" />
+  <h4 class="name">Sisitech Limited</h4>
   <p class="designation">Track your Inventory</p>
 
 <mat-divider></mat-divider>
@@ -59,7 +59,7 @@
                <!-- Price of product Column -->
                <ng-container matColumnDef="price">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> price </th>
-                <td mat-cell *matCellDef="let row"> {{row.price | currency}} </td>
+                <td mat-cell *matCellDef="let row" > {{row.price | currency}} </td>
               </ng-container>
           
                <!-- description of product Column -->
@@ -94,6 +94,13 @@
           </div>
           </div>
           </div> 
+          <div>
+            <h1>1. Pie chart</h1>
+            <canvas #pieCanvas style="height:20vh; width:40vw"></canvas>
+            <hr color="red">
+        </div>       
+
+          
       </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

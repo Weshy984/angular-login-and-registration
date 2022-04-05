@@ -6,6 +6,8 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { MediaMatcher } from '@angular/cdk/layout';
+import { ElementRef } from '@angular/core';
+import { Chart } from 'chart.js';
 @Component({
   selector: 'app-inventory',
   templateUrl: './inventory.component.html',
@@ -18,6 +20,7 @@ export class InventoryComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+ 
 
 
   mobileQuery: MediaQueryList;
@@ -32,7 +35,8 @@ export class InventoryComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.viewItems(); 
+    this.viewItems();
+     
     
   }
 

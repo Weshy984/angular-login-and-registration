@@ -1,7 +1,7 @@
 <p>
     <mat-toolbar color="primary">
       <button mat-icon-button class="example-icon"(click)="snav.toggle()">
-        <mat-icon>menu</mat-icon>
+        <img class="logo" src="../../assets/images/sisitech-logo (1).png" alt="menu">
       </button>
       <span>EmployeeRecords</span>
       <span class="example-spacer"></span>
@@ -12,9 +12,9 @@
   <mat-sidenav-container>
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
     [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-    <img class="avatar mat-elevation-z8" src="https://logodix.com/logo/2111808.jpg" />
-    <h4 class="name">Company Tracker</h4>
-    <p class="designation">Track your Inventory</p>
+    <img class="avatar mat-elevation-z8" src="../../assets/images/sisitech-logo.png" />
+    <h4 class="name">Sisitech Limited</h4>
+    <p class="designation">Employee records</p>
 
 <mat-divider></mat-divider>
     <button mat-button class="menu-button" (click)="openDialog()"><mat-icon>edit</mat-icon>Add Employeee</button>

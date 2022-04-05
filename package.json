@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server":"json-server --watch db.json"
+    "server": "json-server --watch db.json"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "chart.js": "^3.7.1",
     "rxjs": "~7.5.0",
     "semantic-ui-css": "^2.4.1",
     "tslib": "^2.3.0",
