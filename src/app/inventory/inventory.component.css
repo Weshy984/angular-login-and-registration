@@ -13,8 +13,10 @@ table {
 .container{
   max-width: 1200px;
   margin: 0 auto;
+  
 
 }
+
 mat-sidenav {
   margin: 16px;
   width: 200px;
@@ -26,15 +28,16 @@ mat-sidenav {
   text-align: center;
 }
 
-mat-sidenav content {
+mat-sidenav-content {
   height: calc(100vh - 98px);
+  
   border-radius: 10px;
   border-left: 2px;
   margin: 16px;
   margin-left: 32px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+
+ 
+  display: run-in;
   font-size: 3rem;
   color: lightgray;
 }
